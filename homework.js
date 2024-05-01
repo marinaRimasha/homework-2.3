@@ -1,24 +1,34 @@
 const players = [
   {
     id: 1,
-    name: "Ivan",
-    scorePoints: 4500,
+    name: "Anna",
+    scorePoints: 4100,
   },
   {
     id: 2,
-    name: "Petr",
-    scorePoints: 3600,
+    name: "Sergei",
+    scorePoints: 3850,
   },
   {
     id: 3,
-    name: "Vadim",
-    scorePoints: 3433,
+    name: "Elena",
+    scorePoints: 3650,
   },
   {
     id: 4,
-    name: "Olga",
-    scorePoints: 2356,
+    name: "Dmitry",
+    scorePoints: 3000,
   },
+  {
+    id: 5,
+    name: "Nikita",
+    scorePoints: 3750,
+  },
+  {
+    id: 6,
+    name: "Marina",
+    scorePoints: 2800,
+  }
 ];
 
 let scores = []; // created empty array for all the scores
