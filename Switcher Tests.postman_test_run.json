@@ -1,0 +1,301 @@
+{
+	"id": "c095e7ae-654b-4cbc-9e19-c5c311a663fd",
+	"name": "Switcher Tests",
+	"timestamp": "2024-06-16T14:58:44.546Z",
+	"collection_id": "13872782-68147316-cddf-4788-bc9c-79ce22cd1954",
+	"folder_id": 0,
+	"environment_id": "13872782-ee3448b2-15f9-49b8-aa0f-e9cbf0a782fa",
+	"totalPass": 24,
+	"delay": "2",
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-16T14:58:39.238Z",
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "8511cc34-27aa-489a-80a9-ee24c0735ab2",
+			"name": "Login as admin",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/authenticate",
+			"time": 265,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				287,
+				277,
+				263,
+				265
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2cae2751-d94e-46ac-bcee-08f6eb187aa8",
+			"name": "Add new task",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/tasks",
+			"time": 192,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				195,
+				187,
+				191,
+				192
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				},
+				{
+					"Status code is 201": true
+				},
+				{
+					"Status code is 201": true
+				},
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "e86423ec-22e9-4a3e-ada8-a3ff4b3fbec1",
+			"name": "Get newly created task",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/tasks/91923",
+			"time": 185,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Task ID is 91923": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Task ID is 91917": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 4,
+					"fail": 0
+				},
+				"Task ID is 91919": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Task ID is 91921": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Task ID is 91923": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				195,
+				198,
+				196,
+				185
+			],
+			"allTests": [
+				{
+					"Task ID is 91917": true,
+					"Status code is 200": true
+				},
+				{
+					"Task ID is 91919": true,
+					"Status code is 200": true
+				},
+				{
+					"Task ID is 91921": true,
+					"Status code is 200": true
+				},
+				{
+					"Task ID is 91923": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "65598512-cde2-4e5c-8259-5e1983515573",
+			"name": "Add new task - empty mandatory",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/tasks",
+			"time": 192,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 4
+				}
+			},
+			"times": [
+				189,
+				193,
+				197,
+				192
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				},
+				{
+					"Status code is 400": false
+				},
+				{
+					"Status code is 400": false
+				},
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "960fa6bb-4d7a-439e-8212-5bb1ccd3f474",
+			"name": "Remove existing task",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/tasks/91923",
+			"time": 186,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				193,
+				192,
+				189,
+				186
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				},
+				{
+					"Status code is 204": true
+				},
+				{
+					"Status code is 204": true
+				},
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "7ee1cace-ddaf-4224-a734-37e48da7039b",
+			"name": "Verify task doesn't exist",
+			"url": "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api/tasks/91923",
+			"time": 68,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				66,
+				75,
+				76,
+				68
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				},
+				{
+					"Status code is 404": true
+				},
+				{
+					"Status code is 404": true
+				},
+				{
+					"Status code is 404": true
+				}
+			]
+		}
+	],
+	"count": 4,
+	"totalTime": 4447,
+	"collection": {
+		"requests": [
+			{
+				"id": "8511cc34-27aa-489a-80a9-ee24c0735ab2",
+				"method": "POST"
+			},
+			{
+				"id": "2cae2751-d94e-46ac-bcee-08f6eb187aa8",
+				"method": "POST"
+			},
+			{
+				"id": "e86423ec-22e9-4a3e-ada8-a3ff4b3fbec1",
+				"method": "GET"
+			},
+			{
+				"id": "65598512-cde2-4e5c-8259-5e1983515573",
+				"method": "POST"
+			},
+			{
+				"id": "960fa6bb-4d7a-439e-8212-5bb1ccd3f474",
+				"method": "DELETE"
+			},
+			{
+				"id": "7ee1cace-ddaf-4224-a734-37e48da7039b",
+				"method": "GET"
+			}
+		]
+	}
+}
